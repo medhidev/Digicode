@@ -1,0 +1,10 @@
+<resources>
+    <!--  Variables  -->
+    <string name="app_name">Digicode</string>
+    <string name="digi_code_label">Digicode :</string>
+    <string name="digi_code">5862</string>
+
+    <string name="wifi_key_label">Clé Wifi :</string>
+    <string name="wifi_key">ef748c:!6vv7xH4853!ds6dsc</string>
+
+</resources>
