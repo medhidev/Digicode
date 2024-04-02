@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    # Bouton color
+    <color name="login_color">#009667</color>
+    <color name="logout_color">#E91E63</color>
+
 </resources>

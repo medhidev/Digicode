@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3F51B5"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -13,6 +14,10 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="0dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="72dp" />
 
         <LinearLayout
             android:id="@+id/digicode_layout"
@@ -24,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/digi_code_label"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -50,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/wifi_key_label"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -70,10 +77,31 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="144dp" />
+
             <WebView
                 android:id="@+id/QR_Code"
                 android:layout_width="200dp"
-                android:layout_height="200dp" />
+                android:layout_height="200dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </WebView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="132dp" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="234dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="@string/logout_btn"
+                android:textColor="#000000" />
         </LinearLayout>
 
     </LinearLayout>
