@@ -6,26 +6,30 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import com.btssio.ozenne.digicode.bdd.DataCollect
+import com.btssio.ozenne.digicode.bdd.DatabaseConnect
+import java.sql.ResultSet
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Get DataCollect
+        val datacollect = DataCollect()
+        val resultSet: ResultSet = DatabaseConnect.getResultSet()
+        val db = datacollect.processData(resultSet)
+
         // Variables components XML
         val wifikey_id = findViewById<EditText>(R.id.wifi_key)
-        val wifikey = wifikey_id.text.toString();
-        val btn_logout = findViewById<Button>(R.id.btn_logout)
+        val code_wifi = wifikey_id.setText(db[0].wifi_key)
+
         val qrcode = findViewById<WebView>(R.id.QR_Code)
-        val intent_runLogin = Intent(this, LoginActivity::class.java)
+        val btn_logout = findViewById<Button>(R.id.btn_logout)
+        val intent_runLogin = Intent(this, LoginActivity::class.java) // Action redirection
 
         // URL loading - QRCode
-        qrcode.loadUrl("https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$wifikey")
-
-        // Display
-        val duration = Toast.LENGTH_SHORT
-        val toast = Toast.makeText(this, wifikey, duration) // in Activity
+        qrcode.loadUrl("https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$code_wifi")
 
         // Redirection
         btn_logout.setOnClickListener {

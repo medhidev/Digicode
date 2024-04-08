@@ -15,9 +15,23 @@ mobile semble répondre à ce type de besoin.
 
 ### Solution Informatique
 
-* Connexion au site Web (au préalable)
+* Connexion à la BDD
+  * Utilisation de JDBC (Java Data Base Connectivity)
+    * Language programmation (Java/Kotlin)
+    * WampServer (hebergement Local) Mysql
+    -> Autorisation prélable de bin\apache\apacheX.X.X\conf\extra\httpd-vhosts.conf
+  
+  <Schéma technique JDBC>
+  
+  * 
+* Connexion au compte utilisateur
 * Afficher le code d'entrée M2L en fonction d'une date selectionnée :
-    * Date de réservation -> la réservation
+    * Id_Salle -> 
     * Digicode
     * Clé Wifi (WPA)
+
+
+### Rendu du projet
+
+<Capture à venir>
 
