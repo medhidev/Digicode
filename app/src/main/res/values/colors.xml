@@ -3,8 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    # Bouton color
-    <color name="login_color">#009667</color>
-    <color name="logout_color">#E91E63</color>
+    <!--  Button color  -->
+    <color name="green_btn">#009667</color>
+    <color name="red_btn">#E91E63</color>
+    <color name="classic_btn">#176B87</color>
 
+    <!-- Background color -->
+    <color name="main_bg">#EEF5FF</color>
+    <color name="section_bg">#B4D4FF</color>
 </resources>

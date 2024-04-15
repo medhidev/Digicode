@@ -1,0 +1,26 @@
+[
+  {
+    "digicode": 8236,
+    "wifikey": "Sfs3-R3=Cec3",
+    "nom_salle": "Amphithêatre",
+    "date": "10/03/2024"
+  },
+  {
+    "digicode": 5317,
+    "wifikey": "Su3lokofdsfdsf=Cec3",
+    "nom_salle": "Salle Techno",
+    "date": "26/03/2024"
+  },
+  {
+    "digicode": 9999,
+    "wifikey": "Su3263dec3",
+    "nom_salle": "Daum",
+    "date": "03/09/2024"
+  },
+  {
+    "digicode": 2345,
+    "wifikey": "Mlkui3-R3=389",
+    "nom_salle": "Salle Informatique",
+    "date": "12/02/2024"
+  }
+]

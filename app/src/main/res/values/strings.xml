@@ -1,15 +1,12 @@
 <resources>
-    <!--  Variables Main activity -->
+    <!-- Variables Main activity -->
+    <string name="main_btn">Liste Salles</string>
+
+    <!-- Variables Liste Salle activity -->
+
+    <!--  Variables Code activity -->
     <string name="app_name">Digicode</string>
     <string name="digi_code_label">Digicode :</string>
-    <string name="digi_code"></string>
-
     <string name="wifi_key_label">Clé Wifi :</string>
-    <string name="wifi_key"></string>
-
-    <string name="logout_btn">Déconnexion</string>
-
-    <!-- Variables Login activity -->
-    <string name="login_btn">Connexion</string>
-
+    <string name="logout_btn">Retour Liste Salles</string>
 </resources>
