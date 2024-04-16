@@ -30,7 +30,10 @@ class Adapter(private val salles: List<String>) : RecyclerView.Adapter<Adapter.V
         // action executer sur toutes les salles
         holder.itemView.setOnClickListener(){
             val context = holder.itemView.context
-            val intent = Intent(context, DataActivity::class.java)
+            val intent = Intent(context, DataActivity::class.java).apply{
+                putExtra("DIGICODE", salles.indexOf(salles[position]))
+                putExtra("WIFI", "xxxxx")
+            }
             context.startActivity(intent)
         }
     }
