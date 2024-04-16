@@ -19,8 +19,9 @@ class DataActivity : AppCompatActivity(){
         val digicode = findViewById<TextView>(R.id.digicode_key)
 
         // Transmet les données du digicode et de la clé WIFI
-        digicode.setText(intent.getStringExtra("DIGICODE"))
-        val code_wifi = wifikey.setText(intent.getStringExtra("WIFI"))
+        digicode.setText(intent.getStringExtra("DIGICODE").toString())
+        val code_wifi = intent.getStringExtra("WIFI")
+        wifikey.setText(code_wifi)
 
         // Composant du Qrcode
         val qrcode = findViewById<WebView>(R.id.QR_Code)

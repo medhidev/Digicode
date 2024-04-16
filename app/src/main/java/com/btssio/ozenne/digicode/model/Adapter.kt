@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.btssio.ozenne.digicode.R
 import com.btssio.ozenne.digicode.controller.DataActivity
 
-class Adapter(private val salles: List<String>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(private val codes: List<Code>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
     // Appel de l'item Cible (evite les répétitions)
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -24,20 +24,24 @@ class Adapter(private val salles: List<String>) : RecyclerView.Adapter<Adapter.V
 
     // Mettre le nom de salle pour chaque items
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val salleName = salles[position]
+        // Données récupérer dans la liste de l'objet Code
+        val salleName = codes[position].nom_salle
+        val digicode = codes[position].digicode
+        val wifikey = codes[position].wifikey
+
         holder.textView.text = salleName
 
         // action executer sur toutes les salles
         holder.itemView.setOnClickListener(){
             val context = holder.itemView.context
             val intent = Intent(context, DataActivity::class.java).apply{
-                putExtra("DIGICODE", salles.indexOf(salles[position]))
-                putExtra("WIFI", "xxxxx")
+                putExtra("DIGICODE", digicode.toString())
+                putExtra("WIFI", wifikey)
             }
             context.startActivity(intent)
         }
     }
 
     // Nombre de salles
-    override fun getItemCount() = salles.size
+    override fun getItemCount() = codes.size // Donne indirectement le nombres de salle
 }

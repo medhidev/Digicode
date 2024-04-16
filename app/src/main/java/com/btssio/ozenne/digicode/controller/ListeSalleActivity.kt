@@ -22,13 +22,10 @@ class ListeSalleActivity : AppCompatActivity() {
 
         // Mettre les salle de l'objet Code dans un tableau
         val liste_code = codeRepository.getCode()
-        val salleNames = mutableListOf<String>()
-        for (code in liste_code)
-            salleNames.add(code.nom_salle)
 
         // affichage des salles
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = Adapter(salleNames)
+        adapter = Adapter(liste_code)
         recyclerView.adapter = adapter
 
     }
