@@ -22,5 +22,29 @@
     "wifikey": "Mlkui3-R3=389",
     "nom_salle": "Salle Informatique",
     "date": "12/02/2024"
+  },
+  {
+    "digicode": 2345,
+    "wifikey": "Mlkui3-R3=389",
+    "nom_salle": "Salle Restauration",
+    "date": "12/02/2024"
+  },
+  {
+    "digicode": 2345,
+    "wifikey": "Mlkui3-R3=389",
+    "nom_salle": "Majorelle",
+    "date": "12/02/2024"
+  },
+  {
+    "digicode": 2345,
+    "wifikey": "Mlkui3-R3=389",
+    "nom_salle": "Hall d'accueil",
+    "date": "12/02/2024"
+  },
+  {
+    "digicode": 2345,
+    "wifikey": "Mlkui3-R3=389",
+    "nom_salle": "Longwy",
+    "date": "12/02/2024"
   }
 ]

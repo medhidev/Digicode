@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
+    android:background="@color/main_bg"
     tools:context=".controller.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="@color/main_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/digi_code_label"
-                android:textColor="#000000"
+                android:textColor="@color/section_bg"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -60,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/wifi_key_label"
-                android:textColor="#000000"
+                android:textColor="@color/section_bg"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -84,13 +85,13 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="144dp" />
+                android:layout_height="89dp" />
 
             <WebView
                 android:id="@+id/QR_Code"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_marginHorizontal="110dp">
+                android:layout_marginHorizontal="100dp">
                 android:
 
                 <Space
@@ -100,16 +101,16 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="162dp" />
 
             <Button
                 android:id="@+id/btn_logout"
                 android:layout_width="256dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="80dp"
-                android:backgroundTint="#E91E63"
+                android:backgroundTint="@color/classic_btn"
                 android:text="@string/logout_btn"
-                android:textColor="#000000" />
+                android:textColor="@color/section_bg" />
 
         </LinearLayout>
 

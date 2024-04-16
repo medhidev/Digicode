@@ -17,7 +17,6 @@ class DataActivity : AppCompatActivity(){
         val wifikey = findViewById<EditText>(R.id.wifi_key)
         val digicode = findViewById<EditText>(R.id.digicode_key)
 
-
         // Set values WIFI code & DIGICODE
         digicode.setText("5555")
         val code_wifi = wifikey.setText("mdpWIFI")
