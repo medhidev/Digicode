@@ -36,7 +36,7 @@ class Salle_Adapter(private var codes: List<Code>, private val date_select: Stri
         else
             holder.itemView.visibility = View.GONE // cache les autres item
 
-        // action executer sur toutes les salles
+        // Injection des données sur la salle cible
         holder.itemView.setOnClickListener(){
             val context = holder.itemView.context
             val intent = Intent(context, DataActivity::class.java).apply{
@@ -48,13 +48,13 @@ class Salle_Adapter(private var codes: List<Code>, private val date_select: Stri
         }
     }
 
-    // Méthode pour mettre à jour la liste de données
-    fun updateData(newData: List<Code>) {
-        val sortedList = mutableListOf<Code>()
-        val otherList = mutableListOf<Code>()
+    // Méthode pour mettre à jour la liste de données / Les triés
+    fun updateData(list_codes: List<Code>) {
+        val sortedList = mutableListOf<Code>() // Liste a afficher
+        val otherList = mutableListOf<Code>() // Liste a cacher
 
         // Séparer les salles qui correspondent à la date sélectionnée et les autres salles
-        for (code in newData) {
+        for (code in list_codes) {
             if (code.date == date_select) {
                 sortedList.add(code)
             } else {
@@ -62,15 +62,13 @@ class Salle_Adapter(private var codes: List<Code>, private val date_select: Stri
             }
         }
 
-        // Mettre d'abord les salles qui correspondent à la date sélectionnée, puis les autres salles
+        // Priorise l'affichage de la sortedList
         sortedList.addAll(otherList)
 
-        // Mettre à jour l'adaptateur avec la nouvelle liste triée
+        // Mettre à jour de l'affichage avec la nouvelle liste triée
         codes = sortedList
         notifyDataSetChanged()
     }
-
-
 
     // Nombre de salles
     override fun getItemCount() = codes.size // Donne indirectement le nombres de salle

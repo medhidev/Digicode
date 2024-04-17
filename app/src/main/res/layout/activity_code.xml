@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fonce1"
+    android:background="@color/main"
     tools:context=".controller.MainActivity">
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_marginTop="30dp"
             android:text="Nom Salle"
             android:textAlignment="center"
-            android:textColor="@color/main"
+            android:textColor="@color/nuance2"
             android:textSize="24sp" />
 
         <Space

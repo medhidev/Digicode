@@ -35,14 +35,9 @@ class MainActivity : AppCompatActivity() {
 
             // Redirection via le bouton search
             btn_search_salle.setOnClickListener {
-                if (date_select.isEmpty())
-                    Toast.makeText(this, "Aucune date sélectionnée", Toast.LENGTH_SHORT).show()
-                else{
-                    Toast.makeText(this, "Date sélectionnée : $date_select", Toast.LENGTH_SHORT).show() // Affichage date
-                    val intent_liste_salle = Intent(this, ListeSalleActivity::class.java)
-                    intent_liste_salle.putExtra("date_select", date_select)
-                    startActivity(intent_liste_salle) // Redirection Action
-                }
+                val intent_liste_salle = Intent(this, ListeSalleActivity::class.java)
+                intent_liste_salle.putExtra("date_select", date_select)
+                startActivity(intent_liste_salle) // Redirection Action
             }
         }
 }

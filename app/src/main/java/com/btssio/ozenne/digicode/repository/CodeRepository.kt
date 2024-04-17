@@ -20,6 +20,7 @@ class CodeRepository (private val context: Context){
         return codes
     }
 
+    // Accès au fichier JSON
     private fun loadCode(): List<Code> {
         val jsonFileString = getJsonDataFromAsset(context, "data.json")
         if (jsonFileString == null) { // Error
@@ -33,6 +34,7 @@ class CodeRepository (private val context: Context){
         return liste_codes
     }
 
+    // Récupération des données
     private fun getJsonDataFromAsset(context: Context, fileName: String): String? {
         return try {
             context.assets.open(fileName).bufferedReader().use { it.readText() }

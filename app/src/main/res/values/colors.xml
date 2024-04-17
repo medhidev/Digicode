@@ -4,10 +4,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--  Color Pannel  -->
-    <color name="fonce1">#003051</color>
-    <color name="nuance1">#004792</color>
-    <color name="main">#3F7CAF</color>
-    <color name="fonce2">#FC9100</color>
-    <color name="nuance2">#FFB116</color>
+    <color name="fonce1">#352F44</color>
+    <color name="nuance1">#5C5470</color>
+    <color name="main">#FAF0E6</color>
+    <color name="fonce2">#61677A</color>
+    <color name="nuance2">#B9B4C7</color>
 
 </resources>

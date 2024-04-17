@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fonce1">
+    android:background="@color/main">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:layout_width="328dp"
             android:layout_height="318dp"
             android:layout_marginLeft="30dp"
-            android:background="@color/main"
+            android:background="@color/white"
             android:calendarTextColor="@color/nuance2"
             android:headerBackground="@color/nuance1" />
 
