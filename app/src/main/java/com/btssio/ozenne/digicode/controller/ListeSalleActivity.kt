@@ -29,6 +29,7 @@ class ListeSalleActivity : AppCompatActivity() {
         // affichage des salles
         recyclerView.layoutManager = LinearLayoutManager(this)
         salleAdapter = Salle_Adapter(liste_code, date_select)
+        salleAdapter.updateData(liste_code)
         recyclerView.adapter = salleAdapter
 
         btn_retour_recherche.setOnClickListener(){

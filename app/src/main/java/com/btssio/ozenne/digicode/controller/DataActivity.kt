@@ -31,7 +31,7 @@ class DataActivity : AppCompatActivity(){
         val qrcode = findViewById<WebView>(R.id.QR_Code)
 
         val btn_liste_salle = findViewById<Button>(R.id.btn_logout)
-        val intent_liste_salle = Intent(this, ListeSalleActivity::class.java) // Redirection Action
+        val intent_liste_salle = Intent(this, MainActivity::class.java) // Redirection MainActivity
 
         // API -> QRCode
         qrcode.loadUrl("https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$code_wifi")

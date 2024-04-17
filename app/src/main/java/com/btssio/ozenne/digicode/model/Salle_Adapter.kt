@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.btssio.ozenne.digicode.R
 import com.btssio.ozenne.digicode.controller.DataActivity
 
-class Salle_Adapter(private val codes: List<Code>, private val date_select: String) : RecyclerView.Adapter<Salle_Adapter.ViewHolder>() {
+class Salle_Adapter(private var codes: List<Code>, private val date_select: String) : RecyclerView.Adapter<Salle_Adapter.ViewHolder>() {
 
     // Appel de l'item Cible (evite les répétitions)
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -47,6 +47,29 @@ class Salle_Adapter(private val codes: List<Code>, private val date_select: Stri
             context.startActivity(intent)
         }
     }
+
+    // Méthode pour mettre à jour la liste de données
+    fun updateData(newData: List<Code>) {
+        val sortedList = mutableListOf<Code>()
+        val otherList = mutableListOf<Code>()
+
+        // Séparer les salles qui correspondent à la date sélectionnée et les autres salles
+        for (code in newData) {
+            if (code.date == date_select) {
+                sortedList.add(code)
+            } else {
+                otherList.add(code)
+            }
+        }
+
+        // Mettre d'abord les salles qui correspondent à la date sélectionnée, puis les autres salles
+        sortedList.addAll(otherList)
+
+        // Mettre à jour l'adaptateur avec la nouvelle liste triée
+        codes = sortedList
+        notifyDataSetChanged()
+    }
+
 
 
     // Nombre de salles

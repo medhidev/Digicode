@@ -24,7 +24,7 @@
             android:layout_height="318dp"
             android:layout_marginLeft="30dp"
             android:background="@color/main"
-            android:datePickerMode="calendar"
+            android:calendarTextColor="@color/nuance2"
             android:headerBackground="@color/nuance1" />
 
         <Space
