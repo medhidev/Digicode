@@ -17,9 +17,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/nom_salle"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="30dp"
+            android:text="Nom Salle"
+            android:textAlignment="center"
+            android:textColor="@color/main"
+            android:textSize="24sp" />
+
         <Space
             android:layout_width="match_parent"
-            android:layout_height="72dp" />
+            android:layout_height="52dp" />
 
         <LinearLayout
             android:id="@+id/digicode_layout"
@@ -89,7 +99,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="144dp" />
+                android:layout_height="102dp" />
 
             <WebView
                 android:id="@+id/QR_Code"
@@ -105,7 +115,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="162dp" />
+                android:layout_height="149dp" />
 
             <Button
                 android:id="@+id/btn_logout"
@@ -114,7 +124,7 @@
                 android:layout_marginHorizontal="80dp"
                 android:backgroundTint="@color/nuance2"
                 android:text="@string/logout_btn"
-                android:textColor="@color/fonce2" />
+                android:textColor="@color/nuance1" />
 
         </LinearLayout>
 

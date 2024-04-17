@@ -17,11 +17,15 @@ class DataActivity : AppCompatActivity(){
         // Récupération ID XML
         val wifikey = findViewById<TextView>(R.id.wifi_key)
         val digicode = findViewById<TextView>(R.id.digicode_key)
+        val nom_salle = findViewById<TextView>(R.id.nom_salle)
 
         // Transmet les données du digicode et de la clé WIFI
         digicode.setText(intent.getStringExtra("DIGICODE").toString())
         val code_wifi = intent.getStringExtra("WIFI")
+        val salle = intent.getStringExtra("SALLE")
+
         wifikey.setText(code_wifi)
+        nom_salle.setText(salle)
 
         // Composant du Qrcode
         val qrcode = findViewById<WebView>(R.id.QR_Code)

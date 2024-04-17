@@ -10,34 +10,34 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <ImageView
             android:id="@+id/LogoApp"
             android:layout_width="match_parent"
-            android:layout_height="319dp"
-            android:layout_marginTop="100dp"
+            android:layout_height="252dp"
+            android:layout_marginTop="30dp"
             app:srcCompat="@drawable/m2l_img" />
+
+        <DatePicker
+            android:id="@+id/calendar"
+            android:layout_width="328dp"
+            android:layout_height="318dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/main"
+            android:datePickerMode="calendar"
+            android:headerBackground="@color/nuance1" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="58dp" />
 
-        <Spinner
-            android:id="@+id/date_select"
-            android:layout_width="229dp"
-            android:layout_height="39dp"
-            android:layout_marginLeft="90dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="124dp" />
-
         <Button
-            android:id="@+id/accessList"
+            android:id="@+id/search_salle"
             android:layout_width="286dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="50dp"
             android:backgroundTint="@color/nuance2"
-            android:text="@string/main_btn"
+            android:text="@string/search_btn"
             android:textColor="@color/fonce2" />
 
     </LinearLayout>

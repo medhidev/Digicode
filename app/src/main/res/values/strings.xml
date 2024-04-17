@@ -1,8 +1,9 @@
 <resources>
     <!-- Variables Main activity -->
-    <string name="main_btn">Liste Salles</string>
+    <string name="search_btn">Recherche de Salles</string>
 
     <!-- Variables Liste Salle activity -->
+    <string name="back_search_btn">Retour à la Recherche</string>
 
     <!--  Variables Code activity -->
     <string name="app_name">Digicode</string>

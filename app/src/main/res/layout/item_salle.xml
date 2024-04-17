@@ -21,7 +21,7 @@
         tools:text="Nom de la salle" />
 
     <View
-        android:id="@+id/colorBar"
+        android:id="@+id/salle_barre"
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:layout_marginTop="20dp"
